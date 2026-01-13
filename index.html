@@ -27,6 +27,8 @@
                     <span class="btn-text">PLAY</span>
                 </button>
                 <button id="pokedex-btn" class="menu-btn">Pokedex</button>
+                <button id="battle-btn" class="menu-btn">Battle</button>
+                <button id="legendary-btn" class="menu-btn legendary-menu-btn">Legendary</button>
                 <button id="settings-btn" class="menu-btn">Settings</button>
             </div>
         </div>
@@ -99,6 +101,146 @@
                     <div id="mastery-fill" class="mastery-fill"></div>
                 </div>
                 <p id="mastery-text"></p>
+            </div>
+        </div>
+
+        <!-- Battle Select Screen -->
+        <div id="battle-select-screen" class="screen">
+            <div class="battle-select-header">
+                <button class="back-button" data-target="home-screen">&larr;</button>
+                <h2>Choose Your Fighters</h2>
+            </div>
+            <p id="select-instruction" class="select-instruction">Select your first Pokemon</p>
+            <div id="battle-select-grid" class="battle-select-grid">
+                <!-- Pokemon selection cards will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Battle Screen -->
+        <div id="battle-screen" class="screen">
+            <div class="battle-arena">
+                <!-- Pokemon 1 (left) -->
+                <div class="battle-pokemon-container left">
+                    <div class="hp-container">
+                        <p id="battle-pokemon1-name" class="battle-pokemon-name"></p>
+                        <div class="hp-bar-container">
+                            <div id="hp1-bar" class="hp-fill hp-high"></div>
+                        </div>
+                        <p id="hp1-text" class="hp-text"></p>
+                    </div>
+                    <div id="battle-pokemon1-sprite" class="battle-sprite"></div>
+                </div>
+
+                <!-- VS indicator -->
+                <div class="vs-indicator">VS</div>
+
+                <!-- Pokemon 2 (right) -->
+                <div class="battle-pokemon-container right">
+                    <div class="hp-container">
+                        <p id="battle-pokemon2-name" class="battle-pokemon-name"></p>
+                        <div class="hp-bar-container">
+                            <div id="hp2-bar" class="hp-fill hp-high"></div>
+                        </div>
+                        <p id="hp2-text" class="hp-text"></p>
+                    </div>
+                    <div id="battle-pokemon2-sprite" class="battle-sprite"></div>
+                </div>
+            </div>
+
+            <!-- Turn indicator -->
+            <div id="turn-indicator" class="turn-indicator"></div>
+
+            <!-- Quick-time attack bar -->
+            <div id="quick-time-container" class="quick-time-container hidden">
+                <p class="quick-time-instruction">Tap when the marker hits the target!</p>
+                <div class="quick-time-bar">
+                    <div id="quick-time-target" class="quick-time-target"></div>
+                    <div id="quick-time-marker" class="quick-time-marker"></div>
+                </div>
+            </div>
+
+            <!-- Attack buttons -->
+            <div id="attack-buttons" class="attack-buttons">
+                <!-- Attack buttons will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Battle Result Screen -->
+        <div id="battle-result-screen" class="screen">
+            <div class="battle-result-container">
+                <h2 class="victory-title">Victory!</h2>
+                <div id="winner-sprite" class="winner-sprite"></div>
+                <p id="winner-name" class="winner-name"></p>
+                <p id="xp-gained" class="xp-gained"></p>
+                <p id="level-up-message" class="level-up-message hidden"></p>
+                <button id="battle-continue-btn" class="continue-button">Continue</button>
+            </div>
+        </div>
+
+        <!-- Legendary Boss Select Screen -->
+        <div id="legendary-select-screen" class="screen">
+            <div class="legendary-select-header">
+                <button class="back-button" data-target="home-screen">&larr;</button>
+                <h2>Legendary Bosses</h2>
+            </div>
+            <p class="legendary-subtitle">Defeat bosses to add them to your team!</p>
+            <div id="boss-select-grid" class="boss-select-grid">
+                <!-- Boss cards will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Legendary Battle Screen -->
+        <div id="legendary-battle-screen" class="screen">
+            <div class="legendary-battle-header">
+                <span class="legendary-battle-title">BOSS FIGHT</span>
+            </div>
+
+            <div class="legendary-battle-arena">
+                <!-- Team (left side) -->
+                <div class="legendary-team-side">
+                    <p class="team-label">YOUR TEAM</p>
+                    <div id="legendary-team-container" class="legendary-team-container">
+                        <!-- Team Pokemon cards will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Boss (right side) -->
+                <div class="legendary-boss-side">
+                    <div class="boss-info">
+                        <p id="legendary-boss-name" class="legendary-boss-name"></p>
+                        <div class="boss-hp-container">
+                            <div id="boss-hp-bar" class="boss-hp-fill hp-high"></div>
+                        </div>
+                        <p id="boss-hp-text" class="boss-hp-text"></p>
+                    </div>
+                    <div id="legendary-boss-sprite" class="legendary-boss-sprite"></div>
+                </div>
+            </div>
+
+            <!-- Turn info -->
+            <div id="legendary-turn-info" class="legendary-turn-info"></div>
+
+            <!-- Quick-time bar -->
+            <div id="legendary-quick-time" class="legendary-quick-time hidden">
+                <p class="quick-time-instruction">Tap when marker hits target!</p>
+                <div class="quick-time-bar">
+                    <div class="quick-time-target"></div>
+                    <div id="legendary-marker" class="quick-time-marker"></div>
+                </div>
+            </div>
+
+            <!-- Attack button -->
+            <button id="team-attack-btn" class="team-attack-btn">TEAM ATTACK!</button>
+        </div>
+
+        <!-- Legendary Result Screen -->
+        <div id="legendary-result-screen" class="screen">
+            <div class="legendary-result-container">
+                <h2 id="legendary-result-title" class="legendary-result-title"></h2>
+                <div id="legendary-result-sprite" class="legendary-result-sprite"></div>
+                <p id="legendary-result-message" class="legendary-result-message"></p>
+                <p id="legendary-result-xp" class="legendary-result-xp"></p>
+                <button id="legendary-continue-btn" class="continue-button">Continue</button>
             </div>
         </div>
 
@@ -184,6 +326,8 @@
     <script src="js/pokemon.js"></script>
     <script src="js/puzzles.js"></script>
     <script src="js/audio.js"></script>
+    <script src="js/battle.js"></script>
+    <script src="js/legendary.js"></script>
     <script src="js/game.js"></script>
 </body>
 </html>

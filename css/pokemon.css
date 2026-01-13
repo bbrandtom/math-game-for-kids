@@ -91,6 +91,19 @@
     background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png');
 }
 
+/* Legendary Pokemon */
+.pokemon-lucario {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png');
+}
+
+.pokemon-mewtwo {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png');
+}
+
+.pokemon-arceus {
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png');
+}
+
 /* Pokemon Type Colors */
 .type-electric {
     background-color: #F7D02C;

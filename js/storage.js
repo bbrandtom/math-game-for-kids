@@ -23,15 +23,25 @@ const Storage = {
             'word-problems': true
         },
         pokemon: {
-            // Pokemon caught status and evolution stage
-            'pikachu': { caught: false, stage: 0, correctAnswers: 0 },
-            'squirtle': { caught: false, stage: 0, correctAnswers: 0 },
-            'oddish': { caught: false, stage: 0, correctAnswers: 0 },
-            'porygon': { caught: false, stage: 0, correctAnswers: 0 },
-            'magnemite': { caught: false, stage: 0, correctAnswers: 0 },
-            'abra': { caught: false, stage: 0, correctAnswers: 0 },
-            'exeggcute': { caught: false, stage: 0, correctAnswers: 0 },
-            'bulbasaur': { caught: false, stage: 0, correctAnswers: 0 }
+            // Pokemon caught status, evolution stage, and battle stats
+            'pikachu': { caught: false, stage: 0, correctAnswers: 0, level: 1, xp: 0 },
+            'squirtle': { caught: false, stage: 0, correctAnswers: 0, level: 1, xp: 0 },
+            'oddish': { caught: false, stage: 0, correctAnswers: 0, level: 1, xp: 0 },
+            'porygon': { caught: false, stage: 0, correctAnswers: 0, level: 1, xp: 0 },
+            'magnemite': { caught: false, stage: 0, correctAnswers: 0, level: 1, xp: 0 },
+            'abra': { caught: false, stage: 0, correctAnswers: 0, level: 1, xp: 0 },
+            'exeggcute': { caught: false, stage: 0, correctAnswers: 0, level: 1, xp: 0 },
+            'bulbasaur': { caught: false, stage: 0, correctAnswers: 0, level: 1, xp: 0 },
+            // Legendary Pokemon (caught by defeating bosses)
+            'lucario': { caught: false, stage: 1, level: 1, xp: 0 },
+            'mewtwo': { caught: false, stage: 1, level: 1, xp: 0 },
+            'arceus': { caught: false, stage: 1, level: 1, xp: 0 }
+        },
+        // Track defeated legendary bosses
+        legendaryDefeated: {
+            'lucario': false,
+            'mewtwo': false,
+            'arceus': false
         },
         topicMastery: {
             'addition': { correct: 0, consecutiveCorrect: 0 },
@@ -143,5 +153,93 @@ const Storage = {
 
     getCaughtCount(state) {
         return Object.values(state.pokemon).filter(p => p.caught).length;
+    },
+
+    // Battle-related methods
+    addBattleXP(state, pokemonId, xpAmount) {
+        if (!state.pokemon[pokemonId] || !state.pokemon[pokemonId].caught) return false;
+
+        const pokemon = state.pokemon[pokemonId];
+        pokemon.xp += xpAmount;
+
+        // Check for level up
+        const xpNeeded = PokemonData.getXPForLevel(pokemon.level);
+        let leveledUp = false;
+
+        while (pokemon.xp >= xpNeeded && pokemon.level < 10) {
+            pokemon.xp -= xpNeeded;
+            pokemon.level++;
+            leveledUp = true;
+        }
+
+        this.save(state);
+        return leveledUp;
+    },
+
+    getPokemonLevel(state, pokemonId) {
+        if (!state.pokemon[pokemonId]) return 1;
+        return state.pokemon[pokemonId].level || 1;
+    },
+
+    getPokemonXP(state, pokemonId) {
+        if (!state.pokemon[pokemonId]) return 0;
+        return state.pokemon[pokemonId].xp || 0;
+    },
+
+    // Legendary-related methods
+    defeatLegendaryBoss(state, bossId) {
+        if (!state.legendaryDefeated) {
+            state.legendaryDefeated = { lucario: false, mewtwo: false, arceus: false };
+        }
+        state.legendaryDefeated[bossId] = true;
+
+        // Catch the legendary Pokemon
+        if (state.pokemon[bossId]) {
+            state.pokemon[bossId].caught = true;
+            state.pokemon[bossId].stage = 1;
+        }
+
+        this.save(state);
+    },
+
+    isBossDefeated(state, bossId) {
+        if (!state.legendaryDefeated) return false;
+        return state.legendaryDefeated[bossId] === true;
+    },
+
+    getDefeatedBossCount(state) {
+        if (!state.legendaryDefeated) return 0;
+        return Object.values(state.legendaryDefeated).filter(d => d).length;
+    },
+
+    // Award XP to multiple Pokemon at once (for team battles)
+    addTeamBattleXP(state, pokemonIds, xpAmount) {
+        const leveledUp = [];
+
+        pokemonIds.forEach(id => {
+            if (state.pokemon[id] && state.pokemon[id].caught) {
+                const pokemon = state.pokemon[id];
+                pokemon.xp += xpAmount;
+
+                // Check for level up
+                let xpNeeded = PokemonData.getXPForLevel(pokemon.level);
+                while (pokemon.xp >= xpNeeded && pokemon.level < 10) {
+                    pokemon.xp -= xpNeeded;
+                    pokemon.level++;
+                    leveledUp.push(id);
+                    xpNeeded = PokemonData.getXPForLevel(pokemon.level);
+                }
+            }
+        });
+
+        this.save(state);
+        return leveledUp;
+    },
+
+    // Get count of caught Pokemon (excluding legendaries for certain checks)
+    getRegularCaughtCount(state) {
+        return Object.entries(state.pokemon)
+            .filter(([id, p]) => p.caught && !PokemonData.isLegendary(id))
+            .length;
     }
 };

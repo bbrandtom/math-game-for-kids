@@ -11,6 +11,8 @@ const Game = {
     init() {
         this.state = Storage.load();
         GameAudio.init(this.state.soundEnabled);
+        Battle.init(this.state);
+        Legendary.init(this.state);
         this.setupEventListeners();
         this.updateUI();
         this.showScreen('home-screen');
@@ -21,6 +23,8 @@ const Game = {
         // Navigation buttons
         document.getElementById('play-btn').addEventListener('click', () => this.startPlaying());
         document.getElementById('pokedex-btn').addEventListener('click', () => this.showPokedex());
+        document.getElementById('battle-btn').addEventListener('click', () => this.startBattle());
+        document.getElementById('legendary-btn').addEventListener('click', () => this.startLegendary());
         document.getElementById('settings-btn').addEventListener('click', () => this.showSettings());
 
         // Back buttons
@@ -108,6 +112,24 @@ const Game = {
     startPlaying() {
         this.showScreen('play-screen');
         this.generateNewPuzzle();
+    },
+
+    // Start battle mode
+    startBattle() {
+        if (!Battle.canBattle(this.state)) {
+            alert('You need to catch at least 2 Pokemon before you can battle!');
+            return;
+        }
+        Battle.showSelectScreen(this.state);
+    },
+
+    // Start legendary boss fight mode
+    startLegendary() {
+        if (!Legendary.canAttemptLegendary(this.state)) {
+            alert('You need to catch at least 2 Pokemon before challenging legendary bosses!');
+            return;
+        }
+        Legendary.showSelectScreen(this.state);
     },
 
     // Get enabled topics
