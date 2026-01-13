@@ -124,6 +124,7 @@ pokemon-math/
 ```
 
 ### Key Features
+- **GitHub Pages Hosting:** Play instantly at https://bbrandtom.github.io/math-game-for-kids/
 - **Offline Play:** Works without internet after initial load
 - **Progress Tracking:** Pokeballs earned, Pokemon caught, topics mastered
 - **Parent Controls:** easily accessible settings for difficulty presets

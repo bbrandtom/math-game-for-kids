@@ -4,7 +4,9 @@ A web-based math puzzle game for kids where solving math problems earns Pokeball
 
 ## How to Play
 
-Open `index.html` in your browser - no server or installation required.
+**Play online:** https://bbrandtom.github.io/math-game-for-kids/
+
+**Play locally:** Open `index.html` in your browser - no server or installation required.
 
 ## Features
 
