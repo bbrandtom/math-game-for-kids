@@ -5,6 +5,7 @@
   },
   "home": {
     "play": "JOUER",
+    "battle": "Combat",
     "pokedex": "Pokedex",
     "settings": "Paramètres"
   },
@@ -158,5 +159,40 @@
     "ones": "unités",
     "tens": "dizaines",
     "hundreds": "centaines"
+  },
+  "battle": {
+    "hub": {
+      "title": "Arène de Combat",
+      "pvp": "Combat 1v1",
+      "legendary": "Combat Légendaire",
+      "locked": "Verrouillé",
+      "defeat": "Vaincre {{boss}} pour débloquer"
+    },
+    "select": {
+      "title": "Choisir Pokemon",
+      "selectTwo": "Choisissez 2 Pokemon pour combattre",
+      "start": "Commencer le Combat",
+      "level": "Niv.{{level}}",
+      "hp": "PV: {{hp}}"
+    },
+    "fight": {
+      "vs": "VS",
+      "selectAttack": "Choisissez une attaque !",
+      "tapNow": "APPUYEZ !",
+      "perfect": "Parfait !",
+      "near": "Bien !",
+      "miss": "Raté !",
+      "victory": "Victoire !",
+      "defeat": "Défaite !",
+      "xpGained": "+{{xp}} XP",
+      "levelUp": "Niveau supérieur !"
+    },
+    "legendary": {
+      "challenge": "Défier {{boss}}",
+      "selectTeam": "Choisissez jusqu'à 3 Pokemon",
+      "specialAttack": "{{boss}} utilise {{attack}} !",
+      "defeated": "Vous avez vaincu {{boss}} !",
+      "addedToPokedex": "{{boss}} ajouté au Pokedex !"
+    }
   }
 }

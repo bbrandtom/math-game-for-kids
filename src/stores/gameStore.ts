@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { get, set, del } from 'idb-keyval';
-import type { GameStore, GameState, Topic, Difficulty } from './types';
+import type { GameStore, GameState, Topic, Difficulty, LegendaryId } from './types';
+import { calculateLevelUp } from '../utils/battleCalc';
 
 // Current schema version
 const SCHEMA_VERSION = 2;
@@ -25,14 +26,14 @@ const defaultState: GameState = {
     'word-problems': true,
   },
   pokemon: {
-    pikachu: { caught: false, stage: 1 },
-    squirtle: { caught: false, stage: 1 },
-    oddish: { caught: false, stage: 1 },
-    porygon: { caught: false, stage: 1 },
-    magnemite: { caught: false, stage: 1 },
-    abra: { caught: false, stage: 1 },
-    exeggcute: { caught: false, stage: 1 },
-    bulbasaur: { caught: false, stage: 1 },
+    pikachu: { caught: false, stage: 1, level: 1, xp: 0 },
+    squirtle: { caught: false, stage: 1, level: 1, xp: 0 },
+    oddish: { caught: false, stage: 1, level: 1, xp: 0 },
+    porygon: { caught: false, stage: 1, level: 1, xp: 0 },
+    magnemite: { caught: false, stage: 1, level: 1, xp: 0 },
+    abra: { caught: false, stage: 1, level: 1, xp: 0 },
+    exeggcute: { caught: false, stage: 1, level: 1, xp: 0 },
+    bulbasaur: { caught: false, stage: 1, level: 1, xp: 0 },
   },
   topicMastery: {
     addition: { correct: 0, total: 0, consecutiveCorrect: 0 },
@@ -44,6 +45,7 @@ const defaultState: GameState = {
     fractions: { correct: 0, total: 0, consecutiveCorrect: 0 },
     'word-problems': { correct: 0, total: 0, consecutiveCorrect: 0 },
   },
+  defeatedLegendaries: [],
   totalCorrect: 0,
   totalAnswered: 0,
   lastSaved: Date.now(),
@@ -170,6 +172,44 @@ export const useGameStore = create<GameStore>()(
         }));
       },
 
+      gainXP: (pokemonId: string, amount: number) => {
+        set((state) => {
+          const pokemon = state.pokemon[pokemonId];
+          if (!pokemon) return state;
+
+          const { newLevel, newXP } = calculateLevelUp(
+            pokemon.level,
+            pokemon.xp,
+            amount
+          );
+
+          return {
+            pokemon: {
+              ...state.pokemon,
+              [pokemonId]: {
+                ...pokemon,
+                level: newLevel,
+                xp: newXP,
+              },
+            },
+            lastSaved: Date.now(),
+          };
+        });
+      },
+
+      defeatLegendary: (bossId: LegendaryId) => {
+        set((state) => {
+          // Don't add duplicates
+          if (state.defeatedLegendaries.includes(bossId)) {
+            return state;
+          }
+          return {
+            defeatedLegendaries: [...state.defeatedLegendaries, bossId],
+            lastSaved: Date.now(),
+          };
+        });
+      },
+
       setDifficulty: (difficulty: Difficulty) => {
         set({ difficulty, lastSaved: Date.now() });
       },
@@ -233,6 +273,7 @@ export const selectTopicMastery = (state: GameStore) => state.topicMastery;
 export const selectTotalPokeballs = (state: GameStore) => state.totalPokeballs;
 export const selectTotalCorrect = (state: GameStore) => state.totalCorrect;
 export const selectTotalAnswered = (state: GameStore) => state.totalAnswered;
+export const selectDefeatedLegendaries = (state: GameStore) => state.defeatedLegendaries;
 
 // Computed values (call these in components, not as selectors)
 export function getCaughtCount(pokemon: GameStore['pokemon']): number {

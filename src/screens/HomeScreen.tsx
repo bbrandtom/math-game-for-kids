@@ -82,6 +82,14 @@ export function HomeScreen() {
         className="w-full flex flex-col gap-3 max-w-xs"
       >
         <Button
+          variant="primary"
+          size="lg"
+          className="w-full"
+          onClick={() => navigate('/battle')}
+        >
+          {t('home.battle')}
+        </Button>
+        <Button
           variant="secondary"
           size="lg"
           className="w-full"

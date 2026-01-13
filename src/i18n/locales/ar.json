@@ -5,6 +5,7 @@
   },
   "home": {
     "play": "العب",
+    "battle": "معركة",
     "pokedex": "بوكيدكس",
     "settings": "الإعدادات"
   },
@@ -158,5 +159,40 @@
     "ones": "الآحاد",
     "tens": "العشرات",
     "hundreds": "المئات"
+  },
+  "battle": {
+    "hub": {
+      "title": "ساحة المعركة",
+      "pvp": "معركة 1ضد1",
+      "legendary": "معركة أسطورية",
+      "locked": "مغلق",
+      "defeat": "اهزم {{boss}} للفتح"
+    },
+    "select": {
+      "title": "اختر بوكيمون",
+      "selectTwo": "اختر 2 بوكيمون للقتال",
+      "start": "ابدأ المعركة",
+      "level": "مستوى {{level}}",
+      "hp": "نقاط الصحة: {{hp}}"
+    },
+    "fight": {
+      "vs": "ضد",
+      "selectAttack": "اختر هجوم!",
+      "tapNow": "اضغط الآن!",
+      "perfect": "ممتاز!",
+      "near": "جيد!",
+      "miss": "فات!",
+      "victory": "فوز!",
+      "defeat": "هزيمة!",
+      "xpGained": "+{{xp}} خبرة",
+      "levelUp": "ارتقاء المستوى!"
+    },
+    "legendary": {
+      "challenge": "تحدي {{boss}}",
+      "selectTeam": "اختر حتى 3 بوكيمون",
+      "specialAttack": "{{boss}} يستخدم {{attack}}!",
+      "defeated": "هزمت {{boss}}!",
+      "addedToPokedex": "{{boss}} أُضيف للبوكيدكس!"
+    }
   }
 }

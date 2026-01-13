@@ -5,6 +5,7 @@
   },
   "home": {
     "play": "שחק",
+    "battle": "קרב",
     "pokedex": "פוקידקס",
     "settings": "הגדרות"
   },
@@ -158,5 +159,40 @@
     "ones": "יחידות",
     "tens": "עשרות",
     "hundreds": "מאות"
+  },
+  "battle": {
+    "hub": {
+      "title": "זירת הקרב",
+      "pvp": "קרב 1 על 1",
+      "legendary": "קרב אגדי",
+      "locked": "נעול",
+      "defeat": "הביסו את {{boss}} לפתיחה"
+    },
+    "select": {
+      "title": "בחר פוקימון",
+      "selectTwo": "בחר 2 פוקימונים להילחם",
+      "start": "התחל קרב",
+      "level": "רמה {{level}}",
+      "hp": "HP: {{hp}}"
+    },
+    "fight": {
+      "vs": "נגד",
+      "selectAttack": "בחר התקפה!",
+      "tapNow": "לחץ עכשיו!",
+      "perfect": "מושלם!",
+      "near": "טוב!",
+      "miss": "החטאה!",
+      "victory": "ניצחון!",
+      "defeat": "הפסד!",
+      "xpGained": "+{{xp}} ניסיון",
+      "levelUp": "עלית רמה!"
+    },
+    "legendary": {
+      "challenge": "אתגר את {{boss}}",
+      "selectTeam": "בחר עד 3 פוקימונים",
+      "specialAttack": "{{boss}} משתמש ב{{attack}}!",
+      "defeated": "הבסת את {{boss}}!",
+      "addedToPokedex": "{{boss}} נוסף לפוקידקס!"
+    }
   }
 }

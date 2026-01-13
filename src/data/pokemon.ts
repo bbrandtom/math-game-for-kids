@@ -1,4 +1,4 @@
-import type { Topic } from '../stores/types';
+import type { Topic, Attack } from '../stores/types';
 
 export interface Pokemon {
   id: string;
@@ -11,6 +11,8 @@ export interface Pokemon {
     stage3: number; // Consecutive correct needed for stage 3 (mastery challenge)
   };
   type: string; // Pokemon type for theming
+  baseHP: number; // Base HP for battles
+  attacks: Attack[]; // Available attacks (unlocked by level)
 }
 
 // Pokemon database - one per math topic
@@ -23,6 +25,12 @@ export const POKEMON: Record<string, Pokemon> = {
     evolution: ['pikachu', 'raichu'],
     evolutionRequirements: { stage2: 20, stage3: 10 },
     type: 'electric',
+    baseHP: 35,
+    attacks: [
+      { name: 'Thunder Shock', damage: 10, unlockLevel: 1 },
+      { name: 'Electro Ball', damage: 15, unlockLevel: 3 },
+      { name: 'Thunderbolt', damage: 25, unlockLevel: 5 },
+    ],
   },
   squirtle: {
     id: 'squirtle',
@@ -32,6 +40,12 @@ export const POKEMON: Record<string, Pokemon> = {
     evolution: ['squirtle', 'wartortle', 'blastoise'],
     evolutionRequirements: { stage2: 20, stage3: 10 },
     type: 'water',
+    baseHP: 44,
+    attacks: [
+      { name: 'Bubble', damage: 10, unlockLevel: 1 },
+      { name: 'Water Gun', damage: 15, unlockLevel: 3 },
+      { name: 'Hydro Pump', damage: 25, unlockLevel: 5 },
+    ],
   },
   oddish: {
     id: 'oddish',
@@ -41,6 +55,12 @@ export const POKEMON: Record<string, Pokemon> = {
     evolution: ['oddish', 'gloom', 'vileplume'],
     evolutionRequirements: { stage2: 20, stage3: 10 },
     type: 'grass',
+    baseHP: 45,
+    attacks: [
+      { name: 'Absorb', damage: 10, unlockLevel: 1 },
+      { name: 'Acid', damage: 15, unlockLevel: 3 },
+      { name: 'Sleep Powder', damage: 20, unlockLevel: 5 },
+    ],
   },
   porygon: {
     id: 'porygon',
@@ -50,6 +70,12 @@ export const POKEMON: Record<string, Pokemon> = {
     evolution: ['porygon', 'porygon2', 'porygon-z'],
     evolutionRequirements: { stage2: 25, stage3: 10 },
     type: 'normal',
+    baseHP: 65,
+    attacks: [
+      { name: 'Tackle', damage: 10, unlockLevel: 1 },
+      { name: 'Psybeam', damage: 15, unlockLevel: 3 },
+      { name: 'Tri Attack', damage: 25, unlockLevel: 5 },
+    ],
   },
   magnemite: {
     id: 'magnemite',
@@ -59,6 +85,12 @@ export const POKEMON: Record<string, Pokemon> = {
     evolution: ['magnemite', 'magneton', 'magnezone'],
     evolutionRequirements: { stage2: 25, stage3: 10 },
     type: 'electric',
+    baseHP: 25,
+    attacks: [
+      { name: 'Thunder Shock', damage: 10, unlockLevel: 1 },
+      { name: 'Spark', damage: 15, unlockLevel: 3 },
+      { name: 'Flash Cannon', damage: 25, unlockLevel: 5 },
+    ],
   },
   abra: {
     id: 'abra',
@@ -68,6 +100,12 @@ export const POKEMON: Record<string, Pokemon> = {
     evolution: ['abra', 'kadabra', 'alakazam'],
     evolutionRequirements: { stage2: 30, stage3: 10 },
     type: 'psychic',
+    baseHP: 25,
+    attacks: [
+      { name: 'Teleport', damage: 5, unlockLevel: 1 },
+      { name: 'Confusion', damage: 15, unlockLevel: 3 },
+      { name: 'Psychic', damage: 30, unlockLevel: 5 },
+    ],
   },
   exeggcute: {
     id: 'exeggcute',
@@ -77,6 +115,12 @@ export const POKEMON: Record<string, Pokemon> = {
     evolution: ['exeggcute', 'exeggutor'],
     evolutionRequirements: { stage2: 35, stage3: 10 },
     type: 'grass',
+    baseHP: 60,
+    attacks: [
+      { name: 'Barrage', damage: 10, unlockLevel: 1 },
+      { name: 'Confusion', damage: 15, unlockLevel: 3 },
+      { name: 'Solar Beam', damage: 25, unlockLevel: 5 },
+    ],
   },
   bulbasaur: {
     id: 'bulbasaur',
@@ -86,6 +130,12 @@ export const POKEMON: Record<string, Pokemon> = {
     evolution: ['bulbasaur', 'ivysaur', 'venusaur'],
     evolutionRequirements: { stage2: 40, stage3: 10 },
     type: 'grass',
+    baseHP: 45,
+    attacks: [
+      { name: 'Vine Whip', damage: 10, unlockLevel: 1 },
+      { name: 'Razor Leaf', damage: 15, unlockLevel: 3 },
+      { name: 'Solar Beam', damage: 25, unlockLevel: 5 },
+    ],
   },
 };
 

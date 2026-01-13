@@ -5,6 +5,7 @@
   },
   "home": {
     "play": "PLAY",
+    "battle": "Battle",
     "pokedex": "Pokedex",
     "settings": "Settings"
   },
@@ -158,5 +159,40 @@
     "ones": "ones",
     "tens": "tens",
     "hundreds": "hundreds"
+  },
+  "battle": {
+    "hub": {
+      "title": "Battle Arena",
+      "pvp": "1v1 Battle",
+      "legendary": "Legendary Battle",
+      "locked": "Locked",
+      "defeat": "Defeat {{boss}} to unlock"
+    },
+    "select": {
+      "title": "Select Pokemon",
+      "selectTwo": "Select 2 Pokemon to battle",
+      "start": "Start Battle",
+      "level": "Lv.{{level}}",
+      "hp": "HP: {{hp}}"
+    },
+    "fight": {
+      "vs": "VS",
+      "selectAttack": "Select an attack!",
+      "tapNow": "TAP NOW!",
+      "perfect": "Perfect!",
+      "near": "Good!",
+      "miss": "Missed!",
+      "victory": "Victory!",
+      "defeat": "Defeat!",
+      "xpGained": "+{{xp}} XP",
+      "levelUp": "Level Up!"
+    },
+    "legendary": {
+      "challenge": "Challenge {{boss}}",
+      "selectTeam": "Select up to 3 Pokemon",
+      "specialAttack": "{{boss}} uses {{attack}}!",
+      "defeated": "You defeated {{boss}}!",
+      "addedToPokedex": "{{boss}} added to Pokedex!"
+    }
   }
 }
