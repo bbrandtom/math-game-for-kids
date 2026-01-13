@@ -14,6 +14,8 @@ A web-based math puzzle game for kids where solving math problems earns Pokeball
 - 8 collectible Pokemon with evolution chains
 - Parent-controlled difficulty settings (Easy/Medium/Hard)
 - Offline play with LocalStorage progress saving
+- **Battle System**: Pit your caught Pokemon against each other in turn-based battles with quick-time attack mechanics
+- **Legendary Boss Fights**: Challenge powerful legendary Pokemon (Lucario, Mewtwo, Arceus) with your entire team
 
 ## Documentation
 

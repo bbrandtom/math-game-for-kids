@@ -108,14 +108,16 @@ Parent selects one of three presets that control number ranges:
 pokemon-math/
 ├── index.html          # Main game page
 ├── css/
-│   ├── style.css       # Main styles
+│   ├── style.css       # Main styles + battle screens
 │   └── pokemon.css     # Pokemon sprites/animations
 ├── js/
 │   ├── game.js         # Core game logic
 │   ├── puzzles.js      # Puzzle generation
 │   ├── pokemon.js      # Pokemon data & evolution
 │   ├── storage.js      # Save/load progress
-│   └── audio.js        # Sound management
+│   ├── audio.js        # Sound management
+│   ├── battle.js       # Pokemon vs Pokemon battle system
+│   └── legendary.js    # Legendary boss fight system
 ├── assets/
 │   ├── pokemon/        # Pokemon images (PNG/SVG)
 │   └── sounds/         # Sound effects (MP3)
@@ -157,11 +159,50 @@ pokemon-math/
 
 ---
 
+## Battle System
+
+### Pokemon vs Pokemon Battles
+Once players have caught 2+ Pokemon, they can battle them against each other:
+- **Selection**: Choose 2 of your caught Pokemon to battle
+- **Turn-based combat**: Pokemon take turns attacking
+- **Quick-time mechanic**: Tap when the marker hits the target zone for maximum damage
+- **Accuracy levels**: Perfect (100% damage), Near hit (50%), Miss (20%)
+- **XP rewards**: Winner gains XP based on opponent's level
+- **Level ups**: Pokemon level up and gain stronger attacks
+
+### Attack System
+Each Pokemon has attacks based on their level:
+- Attacks have damage values displayed
+- Higher-level Pokemon unlock stronger attacks
+- Damage is modified by quick-time accuracy
+
+---
+
+## Legendary Boss Fights
+
+### Legendary Pokemon (Unlockable Rewards)
+| Pokemon | HP | Unlock Requirement |
+|---------|----|--------------------|
+| **Lucario** | 150 | Available from start |
+| **Mewtwo** | 200 | Defeat Lucario |
+| **Arceus** | 300 | Defeat Mewtwo |
+
+### Boss Fight Mechanics
+- **Team Battle**: Your entire caught team fights together
+- **Combined damage**: All alive Pokemon attack simultaneously
+- **Boss attacks**: Legendary Pokemon have special attacks that can hit multiple targets
+- **Victory reward**: Defeat a boss to catch them and earn team XP
+- **Progression**: Defeating each boss unlocks the next legendary
+
+---
+
 ## User Interface Screens
 
 1. **Home Screen**
    - Play button (styled as Pokeball!)
    - Pokedex (view captured Pokemon)
+   - Battle button (unlocks with 2+ Pokemon)
+   - Legendary button (challenge bosses)
    - Parent Settings (accessible via menu)
 
 2. **Play Screen**
@@ -179,7 +220,29 @@ pokemon-math/
    - Grid of all Pokemon (silhouettes for uncaptured)
    - Tap to see stats and evolution progress
 
-5. **Parent Settings** (accessible via menu)
+5. **Battle Select Screen**
+   - Grid of caught Pokemon
+   - Select 2 Pokemon to battle each other
+
+6. **Battle Screen**
+   - Two Pokemon facing each other
+   - HP bars for each Pokemon
+   - Attack buttons with damage values
+   - Quick-time target bar
+   - Turn indicator
+
+7. **Legendary Select Screen**
+   - Grid of legendary bosses
+   - Locked bosses shown as silhouettes
+   - Defeated bosses marked as caught
+
+8. **Legendary Battle Screen**
+   - Boss Pokemon display with HP bar
+   - Team Pokemon row with individual HP
+   - Combined team attack mechanic
+   - Boss special attack animations
+
+9. **Parent Settings** (accessible via menu)
    - **Difficulty preset:** Easy / Medium / Hard
    - **Topic toggles:** Enable/disable each of 8 topics
    - **Progress stats:** Stars earned, creatures captured, accuracy %
@@ -189,29 +252,42 @@ pokemon-math/
 
 ## Implementation Plan
 
-### Phase 1: Core Foundation
-- [ ] Set up project structure (HTML, CSS, JS files)
-- [ ] Create Pokemon-themed UI layout and navigation
-- [ ] Implement puzzle generation for fill-in-the-blank
+### Phase 1: Core Foundation ✅
+- [x] Set up project structure (HTML, CSS, JS files)
+- [x] Create Pokemon-themed UI layout and navigation
+- [x] Implement puzzle generation for fill-in-the-blank
 
-### Phase 2: Puzzle System
-- [ ] Add visual matching puzzles
-- [ ] Add multiple choice puzzles
-- [ ] Implement answer validation and Pokeball rewards
-- [ ] Add Pokemon-style sound effects
+### Phase 2: Puzzle System ✅
+- [x] Add visual matching puzzles
+- [x] Add multiple choice puzzles
+- [x] Implement answer validation and Pokeball rewards
+- [x] Add Pokemon-style sound effects
 
-### Phase 3: Pokemon System
-- [ ] Create Pokemon data structure with evolution chains
-- [ ] Add Pokemon sprite images
-- [ ] Implement capture mechanics with Pokeball animation
-- [ ] Build Pokedex collection screen
+### Phase 3: Pokemon System ✅
+- [x] Create Pokemon data structure with evolution chains
+- [x] Add Pokemon sprite images
+- [x] Implement capture mechanics with Pokeball animation
+- [x] Build Pokedex collection screen
 
-### Phase 4: Progression & Polish
-- [ ] Add evolution system with mastery requirements
-- [ ] Implement LocalStorage save/load
-- [ ] Create easily accessible parent settings
-- [ ] Add animations and "Gotcha!" celebrations
-- [ ] Final polish and testing
+### Phase 4: Progression & Polish ✅
+- [x] Add evolution system with mastery requirements
+- [x] Implement LocalStorage save/load
+- [x] Create easily accessible parent settings
+- [x] Add animations and "Gotcha!" celebrations
+- [x] Final polish and testing
+
+### Phase 5: Battle System ✅
+- [x] Implement Pokemon vs Pokemon battles
+- [x] Add quick-time attack mechanic
+- [x] Create battle UI with HP bars and turn indicators
+- [x] Add XP and leveling system for battles
+
+### Phase 6: Legendary Boss Fights ✅
+- [x] Add legendary Pokemon (Lucario, Mewtwo, Arceus)
+- [x] Implement team vs boss battle mechanics
+- [x] Create boss special attacks
+- [x] Add progression system (defeat one to unlock next)
+- [x] Legendary Pokemon sprites and styling
 
 ---
 
@@ -224,3 +300,10 @@ pokemon-math/
 6. Test evolution triggers when mastery requirements are met
 7. Test parent settings (difficulty presets, topic toggles)
 8. Test offline mode by disabling network after initial load
+9. Catch 2+ Pokemon and test Battle mode
+10. Verify quick-time mechanic works (perfect/near/miss)
+11. Confirm XP rewards and level ups after battles
+12. Test Legendary boss selection screen
+13. Challenge Lucario and verify team battle mechanics
+14. Defeat Lucario and confirm Mewtwo unlocks
+15. Verify defeated legendaries show as caught in selection
