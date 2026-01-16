@@ -1,0 +1,198 @@
+{
+  "app": {
+    "title": "Pokemon",
+    "subtitle": "Aventure Maths"
+  },
+  "home": {
+    "play": "JOUER",
+    "battle": "Combat",
+    "pokedex": "Pokedex",
+    "settings": "Paramètres"
+  },
+  "play": {
+    "checkAnswer": "Vérifier",
+    "check": "Vérifier",
+    "correct": "Correct !",
+    "tryAgain": "Réessaie !",
+    "pokeballs": "+{{count}} Pokeballs",
+    "pokeballsBonus": "+{{count}} Pokeballs (Bonus série !)",
+    "wildAppeared": "Un Pokemon sauvage est apparu !",
+    "goCatch": "Va l'attraper !",
+    "whatComesNext": "Quel est le suivant ?",
+    "howMany": "Combien de {{item}} y a-t-il ?",
+    "howManyTotal": "Combien au total ?",
+    "groupsOf": "{{groups}} groupes de {{items}}. Combien au total ?",
+    "whatIs": "Combien font {{expression}} ?",
+    "countingBy": "Compter par {{skip}} : {{sequence}}, ?"
+  },
+  "topics": {
+    "addition": "Addition",
+    "subtraction": "Soustraction",
+    "skip-counting": "Comptage par bonds",
+    "shapes": "Formes",
+    "grouping": "Groupement visuel",
+    "place-value": "Valeur de position",
+    "fractions": "Fractions",
+    "word-problems": "Problèmes"
+  },
+  "capture": {
+    "wildEncounter": "Un {{pokemon}} sauvage est apparu !",
+    "catchCost": "{{cost}} Pokeballs pour capturer",
+    "throwBall": "Lancer la Pokeball !",
+    "notEnough": "Pas assez de Pokeballs",
+    "caught": "Attrapé ! {{pokemon}} a été capturé !",
+    "addedToPokedex": "Ajouté à ton Pokedex !",
+    "continue": "Continuer"
+  },
+  "pokedex": {
+    "title": "Pokedex",
+    "caught": "Capturé",
+    "notCaught": "Pas encore capturé",
+    "stage": "Stade {{stage}}",
+    "evolve": "Évoluer ({{cost}} bonnes réponses)",
+    "maxEvolution": "Évolution maximale !",
+    "caughtCount": "{{caught}} / {{total}}",
+    "unknown": "???",
+    "toEvolve": "pour évoluer",
+    "fullyEvolved": "Évolution complète !",
+    "tapToSee": "Appuie sur un Pokemon capturé pour voir les détails"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "difficulty": "Difficulté",
+    "easy": "Facile",
+    "medium": "Moyen",
+    "hard": "Difficile",
+    "range": "({{range}})",
+    "sound": "Son",
+    "soundOn": "Son ACTIVÉ",
+    "soundOff": "Son DÉSACTIVÉ",
+    "topics": "Sujets",
+    "language": "Langue",
+    "progress": "Progression",
+    "totalPokeballs": "Total Pokeballs",
+    "pokemonCaught": "Pokemon capturés",
+    "accuracy": "Précision",
+    "resetProgress": "Réinitialiser la progression",
+    "resetConfirm": "Es-tu sûr de vouloir réinitialiser TOUTE la progression ? Cette action est irréversible !"
+  },
+  "shapes": {
+    "circle": "Cercle",
+    "square": "Carré",
+    "triangle": "Triangle",
+    "rectangle": "Rectangle",
+    "pentagon": "Pentagone",
+    "hexagon": "Hexagone",
+    "whatShape": "Quelle est cette forme ?",
+    "howManySides": "Combien de côtés a un {{shape}} ?",
+    "howManyCorners": "Combien de coins a un {{shape}} ?",
+    "whichHasSides": "Quelle forme a {{count}} côtés ?"
+  },
+  "fractions": {
+    "whatFraction": "Quelle fraction est colorée ?",
+    "whichShows": "Laquelle montre {{fraction}} ?",
+    "oneHalf": "un demi",
+    "oneThird": "un tiers",
+    "oneQuarter": "un quart",
+    "twoThirds": "deux tiers",
+    "threeQuarters": "trois quarts"
+  },
+  "placeValue": {
+    "whatDigit": "Dans {{number}}, quel chiffre est à la place des {{place}} ?",
+    "ones": "unités",
+    "tens": "dizaines",
+    "hundreds": "centaines",
+    "onesDigit": "Quel est le chiffre des unités dans {{number}} ?"
+  },
+  "wordProblems": {
+    "youHaveGet": "Tu as {{a}} {{item}}. Tu en reçois {{b}} de plus. Combien en as-tu maintenant ?",
+    "youHaveGive": "Tu as {{a}} {{item}}. Tu en donnes {{b}}. Combien en reste-t-il ?",
+    "birdsTree": "{{a}} oiseaux sont dans un arbre. {{b}} autres arrivent. Combien d'oiseaux y a-t-il maintenant ?",
+    "fishPond": "Il y a {{a}} poissons dans un étang. {{b}} s'en vont. Combien de poissons reste-t-il ?",
+    "items": {
+      "apples": "pommes",
+      "cookies": "biscuits",
+      "toys": "jouets",
+      "stickers": "autocollants",
+      "pencils": "crayons",
+      "candies": "bonbons",
+      "marbles": "billes",
+      "cards": "cartes",
+      "crayons": "crayons de couleur",
+      "books": "livres"
+    }
+  },
+  "puzzles": {
+    "whatIs": "Combien font {{expression}} ?",
+    "howManyItem": "Combien de {{item}} y a-t-il ?",
+    "whatComesNext": "Quel est le suivant ?",
+    "countingBy": "Compter par {{skip}} : {{sequence}}, ?",
+    "whatShape": "Quelle est cette forme ?",
+    "howManySides": "Combien de côtés a un {{shape}} ?",
+    "howManyCorners": "Combien de coins a un {{shape}} ?",
+    "whichHasSides": "Quelle forme a {{count}} côtés ?",
+    "groupsOf": "{{groups}} groupes de {{items}}. Combien au total ?",
+    "whatDigitInPlace": "Dans {{number}}, quel chiffre est à la place des {{place}} ?",
+    "buildNumberHTO": "{{hundreds}} centaines + {{tens}} dizaines + {{ones}} unités = ?",
+    "buildNumberTO": "{{tens}} dizaines + {{ones}} unités = ?",
+    "onesDigit": "Quel est le chiffre des unités dans {{number}} ?",
+    "whatFraction": "Quelle fraction est colorée ?",
+    "whichShowsFraction": "Laquelle montre {{fraction}} ?",
+    "wordYouHaveGet": "Tu as {{a}} {{item}}. Tu en reçois {{b}} de plus. Combien en as-tu maintenant ?",
+    "wordYouHaveGive": "Tu as {{a}} {{item}}. Tu en donnes {{b}}. Combien en reste-t-il ?",
+    "wordBirdsTree": "{{a}} oiseaux sont dans un arbre. {{b}} autres arrivent. Combien d'oiseaux y a-t-il maintenant ?",
+    "wordFishPond": "Il y a {{a}} poissons dans un étang. {{b}} s'en vont. Combien de poissons reste-t-il ?"
+  },
+  "items": {
+    "apples": "pommes",
+    "cookies": "biscuits",
+    "toys": "jouets",
+    "stickers": "autocollants",
+    "pencils": "crayons",
+    "candies": "bonbons",
+    "marbles": "billes",
+    "cards": "cartes",
+    "crayons": "crayons de couleur",
+    "books": "livres"
+  },
+  "places": {
+    "ones": "unités",
+    "tens": "dizaines",
+    "hundreds": "centaines"
+  },
+  "battle": {
+    "hub": {
+      "title": "Arène de Combat",
+      "pvp": "Combat 1v1",
+      "legendary": "Combat Légendaire",
+      "locked": "Verrouillé",
+      "defeat": "Vaincre {{boss}} pour débloquer"
+    },
+    "select": {
+      "title": "Choisir Pokemon",
+      "selectTwo": "Choisissez 2 Pokemon pour combattre",
+      "start": "Commencer le Combat",
+      "level": "Niv.{{level}}",
+      "hp": "PV: {{hp}}"
+    },
+    "fight": {
+      "vs": "VS",
+      "selectAttack": "Choisissez une attaque !",
+      "tapNow": "APPUYEZ !",
+      "perfect": "Parfait !",
+      "near": "Bien !",
+      "miss": "Raté !",
+      "victory": "Victoire !",
+      "defeat": "Défaite !",
+      "xpGained": "+{{xp}} XP",
+      "levelUp": "Niveau supérieur !"
+    },
+    "legendary": {
+      "challenge": "Défier {{boss}}",
+      "selectTeam": "Choisissez jusqu'à 3 Pokemon",
+      "specialAttack": "{{boss}} utilise {{attack}} !",
+      "defeated": "Vous avez vaincu {{boss}} !",
+      "addedToPokedex": "{{boss}} ajouté au Pokedex !"
+    }
+  }
+}

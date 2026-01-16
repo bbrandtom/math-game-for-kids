@@ -1,0 +1,198 @@
+{
+  "app": {
+    "title": "Pokemon",
+    "subtitle": "Math Adventure"
+  },
+  "home": {
+    "play": "PLAY",
+    "battle": "Battle",
+    "pokedex": "Pokedex",
+    "settings": "Settings"
+  },
+  "play": {
+    "checkAnswer": "Check Answer",
+    "check": "Check",
+    "correct": "Correct!",
+    "tryAgain": "Try again!",
+    "pokeballs": "+{{count}} Pokeballs",
+    "pokeballsBonus": "+{{count}} Pokeballs (Streak Bonus!)",
+    "wildAppeared": "A wild Pokemon appeared!",
+    "goCatch": "Go catch it!",
+    "whatComesNext": "What comes next?",
+    "howMany": "How many {{item}} are there?",
+    "howManyTotal": "How many in total?",
+    "groupsOf": "{{groups}} groups of {{items}}. How many in total?",
+    "whatIs": "What is {{expression}}?",
+    "countingBy": "Counting by {{skip}}s: {{sequence}}, ?"
+  },
+  "topics": {
+    "addition": "Addition",
+    "subtraction": "Subtraction",
+    "skip-counting": "Skip Counting",
+    "shapes": "Shapes",
+    "grouping": "Visual Grouping",
+    "place-value": "Place Value",
+    "fractions": "Fractions",
+    "word-problems": "Word Problems"
+  },
+  "capture": {
+    "wildEncounter": "Wild {{pokemon}} appeared!",
+    "catchCost": "{{cost}} Pokeballs to catch",
+    "throwBall": "Throw Pokeball!",
+    "notEnough": "Not enough Pokeballs",
+    "caught": "Gotcha! {{pokemon}} was caught!",
+    "addedToPokedex": "Added to your Pokedex!",
+    "continue": "Continue"
+  },
+  "pokedex": {
+    "title": "Pokedex",
+    "caught": "Caught",
+    "notCaught": "Not caught yet",
+    "stage": "Stage {{stage}}",
+    "evolve": "Evolve ({{cost}} correct)",
+    "maxEvolution": "Max Evolution!",
+    "caughtCount": "{{caught}} / {{total}}",
+    "unknown": "???",
+    "toEvolve": "to evolve",
+    "fullyEvolved": "Fully Evolved!",
+    "tapToSee": "Tap a caught Pokemon to see details"
+  },
+  "settings": {
+    "title": "Settings",
+    "difficulty": "Difficulty",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "range": "({{range}})",
+    "sound": "Sound",
+    "soundOn": "Sound ON",
+    "soundOff": "Sound OFF",
+    "topics": "Topics",
+    "language": "Language",
+    "progress": "Progress",
+    "totalPokeballs": "Total Pokeballs",
+    "pokemonCaught": "Pokemon Caught",
+    "accuracy": "Accuracy",
+    "resetProgress": "Reset All Progress",
+    "resetConfirm": "Are you sure you want to reset ALL progress? This cannot be undone!"
+  },
+  "shapes": {
+    "circle": "Circle",
+    "square": "Square",
+    "triangle": "Triangle",
+    "rectangle": "Rectangle",
+    "pentagon": "Pentagon",
+    "hexagon": "Hexagon",
+    "whatShape": "What shape is this?",
+    "howManySides": "How many sides does a {{shape}} have?",
+    "howManyCorners": "How many corners does a {{shape}} have?",
+    "whichHasSides": "Which shape has {{count}} sides?"
+  },
+  "fractions": {
+    "whatFraction": "What fraction is shaded?",
+    "whichShows": "Which shows {{fraction}}?",
+    "oneHalf": "one half",
+    "oneThird": "one third",
+    "oneQuarter": "one quarter",
+    "twoThirds": "two thirds",
+    "threeQuarters": "three quarters"
+  },
+  "placeValue": {
+    "whatDigit": "In {{number}}, what digit is in the {{place}} place?",
+    "ones": "ones",
+    "tens": "tens",
+    "hundreds": "hundreds",
+    "onesDigit": "What is the ones digit in {{number}}?"
+  },
+  "wordProblems": {
+    "youHaveGet": "You have {{a}} {{item}}. You get {{b}} more. How many do you have now?",
+    "youHaveGive": "You have {{a}} {{item}}. You give away {{b}}. How many are left?",
+    "birdsTree": "{{a}} birds are in a tree. {{b}} more fly in. How many birds are there now?",
+    "fishPond": "There are {{a}} fish in a pond. {{b}} swim away. How many fish are left?",
+    "items": {
+      "apples": "apples",
+      "cookies": "cookies",
+      "toys": "toys",
+      "stickers": "stickers",
+      "pencils": "pencils",
+      "candies": "candies",
+      "marbles": "marbles",
+      "cards": "cards",
+      "crayons": "crayons",
+      "books": "books"
+    }
+  },
+  "puzzles": {
+    "whatIs": "What is {{expression}}?",
+    "howManyItem": "How many {{item}} are there?",
+    "whatComesNext": "What comes next?",
+    "countingBy": "Counting by {{skip}}s: {{sequence}}, ?",
+    "whatShape": "What shape is this?",
+    "howManySides": "How many sides does a {{shape}} have?",
+    "howManyCorners": "How many corners does a {{shape}} have?",
+    "whichHasSides": "Which shape has {{count}} sides?",
+    "groupsOf": "{{groups}} groups of {{items}}. How many in total?",
+    "whatDigitInPlace": "In {{number}}, what digit is in the {{place}} place?",
+    "buildNumberHTO": "{{hundreds}} hundreds + {{tens}} tens + {{ones}} ones = ?",
+    "buildNumberTO": "{{tens}} tens + {{ones}} ones = ?",
+    "onesDigit": "What is the ones digit in {{number}}?",
+    "whatFraction": "What fraction is shaded?",
+    "whichShowsFraction": "Which shows {{fraction}}?",
+    "wordYouHaveGet": "You have {{a}} {{item}}. You get {{b}} more. How many do you have now?",
+    "wordYouHaveGive": "You have {{a}} {{item}}. You give away {{b}}. How many are left?",
+    "wordBirdsTree": "{{a}} birds are in a tree. {{b}} more fly in. How many birds are there now?",
+    "wordFishPond": "There are {{a}} fish in a pond. {{b}} swim away. How many fish are left?"
+  },
+  "items": {
+    "apples": "apples",
+    "cookies": "cookies",
+    "toys": "toys",
+    "stickers": "stickers",
+    "pencils": "pencils",
+    "candies": "candies",
+    "marbles": "marbles",
+    "cards": "cards",
+    "crayons": "crayons",
+    "books": "books"
+  },
+  "places": {
+    "ones": "ones",
+    "tens": "tens",
+    "hundreds": "hundreds"
+  },
+  "battle": {
+    "hub": {
+      "title": "Battle Arena",
+      "pvp": "1v1 Battle",
+      "legendary": "Legendary Battle",
+      "locked": "Locked",
+      "defeat": "Defeat {{boss}} to unlock"
+    },
+    "select": {
+      "title": "Select Pokemon",
+      "selectTwo": "Select 2 Pokemon to battle",
+      "start": "Start Battle",
+      "level": "Lv.{{level}}",
+      "hp": "HP: {{hp}}"
+    },
+    "fight": {
+      "vs": "VS",
+      "selectAttack": "Select an attack!",
+      "tapNow": "TAP NOW!",
+      "perfect": "Perfect!",
+      "near": "Good!",
+      "miss": "Missed!",
+      "victory": "Victory!",
+      "defeat": "Defeat!",
+      "xpGained": "+{{xp}} XP",
+      "levelUp": "Level Up!"
+    },
+    "legendary": {
+      "challenge": "Challenge {{boss}}",
+      "selectTeam": "Select up to 3 Pokemon",
+      "specialAttack": "{{boss}} uses {{attack}}!",
+      "defeated": "You defeated {{boss}}!",
+      "addedToPokedex": "{{boss}} added to Pokedex!"
+    }
+  }
+}

@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+/* Self-hosted Press Start 2P font for offline use */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/PressStart2P.woff2') format('woff2');
+}
+
+/* Pokemon GBA/DS Theme */
+@theme {
+  /* Pokemon Red/Blue colors */
+  --color-pokemon-red: #E3350D;
+  --color-pokemon-blue: #006FC9;
+  --color-pokemon-yellow: #FFCB05;
+  --color-pokemon-green: #4DAD5B;
+
+  /* GBA-style UI colors */
+  --color-gba-cream: #F8F0E0;
+  --color-gba-tan: #E8D8B8;
+  --color-gba-brown: #8B7355;
+  --color-gba-dark: #303030;
+  --color-gba-shadow: #584838;
+
+  /* Pokeball colors */
+  --color-pokeball-red: #EE1515;
+  --color-pokeball-white: #F0F0F0;
+  --color-pokeball-black: #222224;
+
+  /* Type colors */
+  --color-type-fire: #F08030;
+  --color-type-water: #6890F0;
+  --color-type-grass: #78C850;
+  --color-type-electric: #F8D030;
+  --color-type-psychic: #F85888;
+  --color-type-normal: #A8A878;
+
+  /* Feedback colors */
+  --color-success: #4DAD5B;
+  --color-error: #E3350D;
+  --color-warning: #FFCB05;
+
+  /* Font family */
+  --font-pixel: 'Press Start 2P', monospace;
+
+  /* Spacing scale for pixel-perfect UI */
+  --spacing-pixel: 4px;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-gba-cream);
+  color: var(--color-gba-dark);
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pixel-perfect image rendering */
+img,
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Pokemon-style text shadow */
+.text-shadow-pokemon {
+  text-shadow:
+    2px 2px 0 var(--color-gba-shadow),
+    -1px -1px 0 var(--color-gba-shadow),
+    1px -1px 0 var(--color-gba-shadow),
+    -1px 1px 0 var(--color-gba-shadow);
+}
+
+/* GBA-style border */
+.border-gba {
+  border: 4px solid var(--color-gba-dark);
+  border-radius: 8px;
+  box-shadow:
+    inset 2px 2px 0 var(--color-pokeball-white),
+    inset -2px -2px 0 var(--color-gba-shadow);
+}
+
+/* Animations */
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.3);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px var(--color-pokemon-yellow);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--color-pokemon-yellow), 0 0 30px var(--color-pokemon-yellow);
+  }
+}
+
+@keyframes pokeball-wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-20deg); }
+  75% { transform: rotate(20deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-sparkle {
+  animation: sparkle 0.5s ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-pokeball-wobble {
+  animation: pokeball-wobble 0.5s ease-in-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Touch-friendly tap targets */
+.tap-target {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 3px solid var(--color-pokemon-yellow);
+  outline-offset: 2px;
+}
+
+/* Prevent text selection on game elements */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Safe area padding for mobile */
+.safe-area-padding {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Screen transitions */
+.screen {
+  min-height: 100dvh;
+  width: 100%;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .font-pixel {
+  /* Pixel fonts may need letter-spacing adjustment in RTL */
+  letter-spacing: 0;
+}
+
+/* Flip directional icons in RTL */
+[dir="rtl"] button:has(> :first-child:is(:empty))::before {
+  transform: scaleX(-1);
+}
+
+/* RTL-aware flex direction - use logical properties */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* Preserve math direction (always LTR) */
+.math-content,
+input[type="number"] {
+  direction: ltr;
+  text-align: center;
+}
+
+/* Preserve grid layouts */
+[dir="rtl"] .grid {
+  direction: rtl;
+}
+
+/* Back button should flip in RTL */
+[dir="rtl"] .back-button {
+  transform: scaleX(-1);
+}
