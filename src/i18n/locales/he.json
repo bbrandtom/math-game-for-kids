@@ -1,0 +1,198 @@
+{
+  "app": {
+    "title": "פוקימון",
+    "subtitle": "הרפתקת מתמטיקה"
+  },
+  "home": {
+    "play": "שחק",
+    "battle": "קרב",
+    "pokedex": "פוקידקס",
+    "settings": "הגדרות"
+  },
+  "play": {
+    "checkAnswer": "בדוק תשובה",
+    "check": "בדוק",
+    "correct": "נכון!",
+    "tryAgain": "נסה שוב!",
+    "pokeballs": "+{{count}} פוכדורים",
+    "pokeballsBonus": "+{{count}} פוכדורים (בונוס רצף!)",
+    "wildAppeared": "פוקימון פראי הופיע!",
+    "goCatch": "לך לתפוס אותו!",
+    "whatComesNext": "מה בא אחר כך?",
+    "howMany": "כמה {{item}} יש?",
+    "howManyTotal": "כמה בסך הכל?",
+    "groupsOf": "{{groups}} קבוצות של {{items}}. כמה בסך הכל?",
+    "whatIs": "מה זה {{expression}}?",
+    "countingBy": "ספירה ב-{{skip}}: {{sequence}}, ?"
+  },
+  "topics": {
+    "addition": "חיבור",
+    "subtraction": "חיסור",
+    "skip-counting": "ספירת דילוגים",
+    "shapes": "צורות",
+    "grouping": "קיבוץ חזותי",
+    "place-value": "ערך מקום",
+    "fractions": "שברים",
+    "word-problems": "בעיות מילוליות"
+  },
+  "capture": {
+    "wildEncounter": "{{pokemon}} פראי הופיע!",
+    "catchCost": "{{cost}} פוכדורים לתפיסה",
+    "throwBall": "זרוק פוכדור!",
+    "notEnough": "אין מספיק פוכדורים",
+    "caught": "תפסת! {{pokemon}} נתפס!",
+    "addedToPokedex": "נוסף לפוקידקס שלך!",
+    "continue": "המשך"
+  },
+  "pokedex": {
+    "title": "פוקידקס",
+    "caught": "נתפס",
+    "notCaught": "עדיין לא נתפס",
+    "stage": "שלב {{stage}}",
+    "evolve": "התפתחות ({{cost}} נכונות)",
+    "maxEvolution": "התפתחות מקסימלית!",
+    "caughtCount": "{{caught}} / {{total}}",
+    "unknown": "???",
+    "toEvolve": "להתפתחות",
+    "fullyEvolved": "התפתחות מלאה!",
+    "tapToSee": "לחץ על פוקימון שנתפס לפרטים"
+  },
+  "settings": {
+    "title": "הגדרות",
+    "difficulty": "רמת קושי",
+    "easy": "קל",
+    "medium": "בינוני",
+    "hard": "קשה",
+    "range": "({{range}})",
+    "sound": "צליל",
+    "soundOn": "צליל פועל",
+    "soundOff": "צליל כבוי",
+    "topics": "נושאים",
+    "language": "שפה",
+    "progress": "התקדמות",
+    "totalPokeballs": "סה״כ פוכדורים",
+    "pokemonCaught": "פוקימונים שנתפסו",
+    "accuracy": "דיוק",
+    "resetProgress": "אפס את כל ההתקדמות",
+    "resetConfirm": "האם אתה בטוח שברצונך לאפס את כל ההתקדמות? לא ניתן לבטל פעולה זו!"
+  },
+  "shapes": {
+    "circle": "עיגול",
+    "square": "ריבוע",
+    "triangle": "משולש",
+    "rectangle": "מלבן",
+    "pentagon": "מחומש",
+    "hexagon": "משושה",
+    "whatShape": "איזו צורה זו?",
+    "howManySides": "כמה צלעות יש ל{{shape}}?",
+    "howManyCorners": "כמה פינות יש ל{{shape}}?",
+    "whichHasSides": "לאיזו צורה יש {{count}} צלעות?"
+  },
+  "fractions": {
+    "whatFraction": "איזה שבר צבוע?",
+    "whichShows": "מי מציג {{fraction}}?",
+    "oneHalf": "חצי",
+    "oneThird": "שליש",
+    "oneQuarter": "רבע",
+    "twoThirds": "שני שלישים",
+    "threeQuarters": "שלושה רבעים"
+  },
+  "placeValue": {
+    "whatDigit": "במספר {{number}}, איזו ספרה נמצאת במקום ה{{place}}?",
+    "ones": "יחידות",
+    "tens": "עשרות",
+    "hundreds": "מאות",
+    "onesDigit": "מהי ספרת היחידות במספר {{number}}?"
+  },
+  "wordProblems": {
+    "youHaveGet": "יש לך {{a}} {{item}}. אתה מקבל עוד {{b}}. כמה יש לך עכשיו?",
+    "youHaveGive": "יש לך {{a}} {{item}}. אתה נותן {{b}}. כמה נשאר?",
+    "birdsTree": "{{a}} ציפורים על עץ. עוד {{b}} מגיעות. כמה ציפורים יש עכשיו?",
+    "fishPond": "יש {{a}} דגים בבריכה. {{b}} שוחים משם. כמה דגים נשארו?",
+    "items": {
+      "apples": "תפוחים",
+      "cookies": "עוגיות",
+      "toys": "צעצועים",
+      "stickers": "מדבקות",
+      "pencils": "עפרונות",
+      "candies": "סוכריות",
+      "marbles": "גולות",
+      "cards": "קלפים",
+      "crayons": "צבעי פנדה",
+      "books": "ספרים"
+    }
+  },
+  "puzzles": {
+    "whatIs": "מה זה {{expression}}?",
+    "howManyItem": "כמה {{item}} יש?",
+    "whatComesNext": "מה בא אחר כך?",
+    "countingBy": "ספירה ב-{{skip}}: {{sequence}}, ?",
+    "whatShape": "איזו צורה זו?",
+    "howManySides": "כמה צלעות יש ל{{shape}}?",
+    "howManyCorners": "כמה פינות יש ל{{shape}}?",
+    "whichHasSides": "לאיזו צורה יש {{count}} צלעות?",
+    "groupsOf": "{{groups}} קבוצות של {{items}}. כמה בסך הכל?",
+    "whatDigitInPlace": "במספר {{number}}, איזו ספרה נמצאת במקום ה{{place}}?",
+    "buildNumberHTO": "{{hundreds}} מאות + {{tens}} עשרות + {{ones}} יחידות = ?",
+    "buildNumberTO": "{{tens}} עשרות + {{ones}} יחידות = ?",
+    "onesDigit": "מהי ספרת היחידות במספר {{number}}?",
+    "whatFraction": "איזה שבר צבוע?",
+    "whichShowsFraction": "מי מציג {{fraction}}?",
+    "wordYouHaveGet": "יש לך {{a}} {{item}}. אתה מקבל עוד {{b}}. כמה יש לך עכשיו?",
+    "wordYouHaveGive": "יש לך {{a}} {{item}}. אתה נותן {{b}}. כמה נשאר?",
+    "wordBirdsTree": "{{a}} ציפורים על עץ. עוד {{b}} מגיעות. כמה ציפורים יש עכשיו?",
+    "wordFishPond": "יש {{a}} דגים בבריכה. {{b}} שוחים משם. כמה דגים נשארו?"
+  },
+  "items": {
+    "apples": "תפוחים",
+    "cookies": "עוגיות",
+    "toys": "צעצועים",
+    "stickers": "מדבקות",
+    "pencils": "עפרונות",
+    "candies": "סוכריות",
+    "marbles": "גולות",
+    "cards": "קלפים",
+    "crayons": "צבעי פנדה",
+    "books": "ספרים"
+  },
+  "places": {
+    "ones": "יחידות",
+    "tens": "עשרות",
+    "hundreds": "מאות"
+  },
+  "battle": {
+    "hub": {
+      "title": "זירת הקרב",
+      "pvp": "קרב 1 על 1",
+      "legendary": "קרב אגדי",
+      "locked": "נעול",
+      "defeat": "הביסו את {{boss}} לפתיחה"
+    },
+    "select": {
+      "title": "בחר פוקימון",
+      "selectTwo": "בחר 2 פוקימונים להילחם",
+      "start": "התחל קרב",
+      "level": "רמה {{level}}",
+      "hp": "HP: {{hp}}"
+    },
+    "fight": {
+      "vs": "נגד",
+      "selectAttack": "בחר התקפה!",
+      "tapNow": "לחץ עכשיו!",
+      "perfect": "מושלם!",
+      "near": "טוב!",
+      "miss": "החטאה!",
+      "victory": "ניצחון!",
+      "defeat": "הפסד!",
+      "xpGained": "+{{xp}} ניסיון",
+      "levelUp": "עלית רמה!"
+    },
+    "legendary": {
+      "challenge": "אתגר את {{boss}}",
+      "selectTeam": "בחר עד 3 פוקימונים",
+      "specialAttack": "{{boss}} משתמש ב{{attack}}!",
+      "defeated": "הבסת את {{boss}}!",
+      "addedToPokedex": "{{boss}} נוסף לפוקידקס!"
+    }
+  }
+}

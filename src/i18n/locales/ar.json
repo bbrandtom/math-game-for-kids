@@ -1,0 +1,198 @@
+{
+  "app": {
+    "title": "بوكيمون",
+    "subtitle": "مغامرة الرياضيات"
+  },
+  "home": {
+    "play": "العب",
+    "battle": "معركة",
+    "pokedex": "بوكيدكس",
+    "settings": "الإعدادات"
+  },
+  "play": {
+    "checkAnswer": "تحقق من الإجابة",
+    "check": "تحقق",
+    "correct": "صحيح!",
+    "tryAgain": "حاول مرة أخرى!",
+    "pokeballs": "+{{count}} كرات بوكي",
+    "pokeballsBonus": "+{{count}} كرات بوكي (مكافأة السلسلة!)",
+    "wildAppeared": "ظهر بوكيمون بري!",
+    "goCatch": "اذهب لالتقاطه!",
+    "whatComesNext": "ما الذي يأتي بعد ذلك؟",
+    "howMany": "كم عدد {{item}}؟",
+    "howManyTotal": "كم المجموع؟",
+    "groupsOf": "{{groups}} مجموعات من {{items}}. كم المجموع؟",
+    "whatIs": "ما هو {{expression}}؟",
+    "countingBy": "العد بـ {{skip}}: {{sequence}}، ؟"
+  },
+  "topics": {
+    "addition": "الجمع",
+    "subtraction": "الطرح",
+    "skip-counting": "العد القفزي",
+    "shapes": "الأشكال",
+    "grouping": "التجميع المرئي",
+    "place-value": "القيمة المكانية",
+    "fractions": "الكسور",
+    "word-problems": "المسائل الكلامية"
+  },
+  "capture": {
+    "wildEncounter": "ظهر {{pokemon}} بري!",
+    "catchCost": "{{cost}} كرة بوكي للإمساك",
+    "throwBall": "ارمِ كرة البوكي!",
+    "notEnough": "لا توجد كرات بوكي كافية",
+    "caught": "أمسكته! تم إمساك {{pokemon}}!",
+    "addedToPokedex": "أُضيف إلى البوكيدكس!",
+    "continue": "استمر"
+  },
+  "pokedex": {
+    "title": "بوكيدكس",
+    "caught": "تم الإمساك",
+    "notCaught": "لم يتم الإمساك بعد",
+    "stage": "المرحلة {{stage}}",
+    "evolve": "تطور ({{cost}} صحيحة)",
+    "maxEvolution": "أقصى تطور!",
+    "caughtCount": "{{caught}} / {{total}}",
+    "unknown": "???",
+    "toEvolve": "للتطور",
+    "fullyEvolved": "تطور كامل!",
+    "tapToSee": "اضغط على بوكيمون تم إمساكه للتفاصيل"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "difficulty": "الصعوبة",
+    "easy": "سهل",
+    "medium": "متوسط",
+    "hard": "صعب",
+    "range": "({{range}})",
+    "sound": "الصوت",
+    "soundOn": "الصوت مفعّل",
+    "soundOff": "الصوت متوقف",
+    "topics": "المواضيع",
+    "language": "اللغة",
+    "progress": "التقدم",
+    "totalPokeballs": "إجمالي كرات البوكي",
+    "pokemonCaught": "البوكيمون الملتقط",
+    "accuracy": "الدقة",
+    "resetProgress": "إعادة تعيين كل التقدم",
+    "resetConfirm": "هل أنت متأكد من إعادة تعيين كل التقدم؟ لا يمكن التراجع عن هذا!"
+  },
+  "shapes": {
+    "circle": "دائرة",
+    "square": "مربع",
+    "triangle": "مثلث",
+    "rectangle": "مستطيل",
+    "pentagon": "خماسي",
+    "hexagon": "سداسي",
+    "whatShape": "ما هذا الشكل؟",
+    "howManySides": "كم عدد أضلاع {{shape}}؟",
+    "howManyCorners": "كم عدد زوايا {{shape}}؟",
+    "whichHasSides": "أي شكل له {{count}} أضلاع؟"
+  },
+  "fractions": {
+    "whatFraction": "ما هو الكسر المظلل؟",
+    "whichShows": "أي منها يُظهر {{fraction}}؟",
+    "oneHalf": "النصف",
+    "oneThird": "الثلث",
+    "oneQuarter": "الربع",
+    "twoThirds": "الثلثان",
+    "threeQuarters": "ثلاثة أرباع"
+  },
+  "placeValue": {
+    "whatDigit": "في {{number}}، ما هو الرقم في خانة {{place}}؟",
+    "ones": "الآحاد",
+    "tens": "العشرات",
+    "hundreds": "المئات",
+    "onesDigit": "ما هو رقم الآحاد في {{number}}؟"
+  },
+  "wordProblems": {
+    "youHaveGet": "لديك {{a}} {{item}}. حصلت على {{b}} أخرى. كم لديك الآن؟",
+    "youHaveGive": "لديك {{a}} {{item}}. أعطيت {{b}}. كم تبقى؟",
+    "birdsTree": "{{a}} طيور على شجرة. طار {{b}} أخرى إليها. كم عدد الطيور الآن؟",
+    "fishPond": "هناك {{a}} سمكة في البركة. سبح {{b}} بعيداً. كم سمكة بقيت؟",
+    "items": {
+      "apples": "تفاحات",
+      "cookies": "بسكويت",
+      "toys": "ألعاب",
+      "stickers": "ملصقات",
+      "pencils": "أقلام",
+      "candies": "حلويات",
+      "marbles": "كرات زجاجية",
+      "cards": "بطاقات",
+      "crayons": "أقلام تلوين",
+      "books": "كتب"
+    }
+  },
+  "puzzles": {
+    "whatIs": "ما هو {{expression}}؟",
+    "howManyItem": "كم عدد {{item}}؟",
+    "whatComesNext": "ما الذي يأتي بعد ذلك؟",
+    "countingBy": "العد بـ {{skip}}: {{sequence}}، ؟",
+    "whatShape": "ما هذا الشكل؟",
+    "howManySides": "كم عدد أضلاع {{shape}}؟",
+    "howManyCorners": "كم عدد زوايا {{shape}}؟",
+    "whichHasSides": "أي شكل له {{count}} أضلاع؟",
+    "groupsOf": "{{groups}} مجموعات من {{items}}. كم المجموع؟",
+    "whatDigitInPlace": "في {{number}}، ما هو الرقم في خانة {{place}}؟",
+    "buildNumberHTO": "{{hundreds}} مئات + {{tens}} عشرات + {{ones}} آحاد = ؟",
+    "buildNumberTO": "{{tens}} عشرات + {{ones}} آحاد = ؟",
+    "onesDigit": "ما هو رقم الآحاد في {{number}}؟",
+    "whatFraction": "ما هو الكسر المظلل؟",
+    "whichShowsFraction": "أي منها يُظهر {{fraction}}؟",
+    "wordYouHaveGet": "لديك {{a}} {{item}}. حصلت على {{b}} أخرى. كم لديك الآن؟",
+    "wordYouHaveGive": "لديك {{a}} {{item}}. أعطيت {{b}}. كم تبقى؟",
+    "wordBirdsTree": "{{a}} طيور على شجرة. طار {{b}} أخرى إليها. كم عدد الطيور الآن؟",
+    "wordFishPond": "هناك {{a}} سمكة في البركة. سبح {{b}} بعيداً. كم سمكة بقيت؟"
+  },
+  "items": {
+    "apples": "تفاحات",
+    "cookies": "بسكويت",
+    "toys": "ألعاب",
+    "stickers": "ملصقات",
+    "pencils": "أقلام",
+    "candies": "حلويات",
+    "marbles": "كرات زجاجية",
+    "cards": "بطاقات",
+    "crayons": "أقلام تلوين",
+    "books": "كتب"
+  },
+  "places": {
+    "ones": "الآحاد",
+    "tens": "العشرات",
+    "hundreds": "المئات"
+  },
+  "battle": {
+    "hub": {
+      "title": "ساحة المعركة",
+      "pvp": "معركة 1ضد1",
+      "legendary": "معركة أسطورية",
+      "locked": "مغلق",
+      "defeat": "اهزم {{boss}} للفتح"
+    },
+    "select": {
+      "title": "اختر بوكيمون",
+      "selectTwo": "اختر 2 بوكيمون للقتال",
+      "start": "ابدأ المعركة",
+      "level": "مستوى {{level}}",
+      "hp": "نقاط الصحة: {{hp}}"
+    },
+    "fight": {
+      "vs": "ضد",
+      "selectAttack": "اختر هجوم!",
+      "tapNow": "اضغط الآن!",
+      "perfect": "ممتاز!",
+      "near": "جيد!",
+      "miss": "فات!",
+      "victory": "فوز!",
+      "defeat": "هزيمة!",
+      "xpGained": "+{{xp}} خبرة",
+      "levelUp": "ارتقاء المستوى!"
+    },
+    "legendary": {
+      "challenge": "تحدي {{boss}}",
+      "selectTeam": "اختر حتى 3 بوكيمون",
+      "specialAttack": "{{boss}} يستخدم {{attack}}!",
+      "defeated": "هزمت {{boss}}!",
+      "addedToPokedex": "{{boss}} أُضيف للبوكيدكس!"
+    }
+  }
+}
